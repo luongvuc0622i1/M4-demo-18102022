@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo</title>
+<!--    <title th:replace="~{layout :: title}">Demo</title>-->
+</head>
+<body>
+<!--Demo fragment :: selector-->
+<div th:insert="~{footer :: copy}"></div>
+<!--Demo fragment :: id-->
+<div th:insert="~{footer :: #copy-section}"></div>
+<!--Demo fragment in template-->
+<div th:insert="~{this :: logo}"></div>
+<!--Demo fragment with parameters-->
+<div th:insert="~{layout :: frag (Vu,Luong)}"></div>
+
+<p>Đây là nội dung</p>
+
+<div th:fragment="logo">
+    Day la logo 1
+</div>
+</body>
+</html>
